@@ -1,6 +1,6 @@
 'use strict';
 
-const childProcess = require('child_process'),
+var childProcess = require('child_process'),
       phantomjs    = require('phantomjs-prebuilt'),
       phBinPath    = phantomjs.path,
       path         = require('path'),
@@ -30,7 +30,7 @@ exports = module.exports = function(options, cb) {
 	log.verbose('larviturltopdf: Running for url: "' + options.url + '"');
 
 	tmp.file(function(err, tmpFile) {
-		const execArgs = [
+		var execArgs = [
 			path.join(__dirname, 'rasterize.js'),
 			options.url,
 			tmpFile,
@@ -52,7 +52,7 @@ exports = module.exports = function(options, cb) {
 
 		childProcess.execFile(phBinPath, execArgs, execOptions, function(err, stdout, stderr) {
 			if (stderr) {
-				const stderrErr = new Error('stderr is not empty: ' + stderr);
+				var stderrErr = new Error('stderr is not empty: ' + stderr);
 				log.error('larviturltopdf: ' + stderrErr.message);
 				cb(stderrErr);
 				return;
