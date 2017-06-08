@@ -16,9 +16,9 @@
   "author": "Lilleman <lilleman@larvit.se>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/larvit/larviturltopdf/issues"
+    "url": "https://github.com/bugz313/urltopdfht/issues"
   },
-  "homepage": "https://github.com/larvit/larviturltopdf#readme",
+  "homepage": "https://github.com/bugz313/urltopdfht#readme",
   "dependencies": {
     "phantomjs-prebuilt": "^2.1.7",
     "tmp": "0.0.28",
